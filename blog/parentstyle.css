@@ -1,12 +1,15 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: rgb(12, 12, 12);  
     font-family: 'Helvetica Neue', sans-serif;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .back-to-home-container {
@@ -67,4 +70,5 @@ body {
     margin: 20px;
     margin-left: 20%;
     margin-right: 20%;
+    flex: 1;
 }
