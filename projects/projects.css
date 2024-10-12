@@ -17,7 +17,7 @@
     border: 1px solid #77dd77;
     overflow: hidden;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s ease-out; /* Increased duration and changed timing function */
 }
 
 .project-image {

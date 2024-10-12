@@ -6,8 +6,8 @@ document.querySelectorAll('.project').forEach(project => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        const rotateY = ((x / rect.width) - 0.5) * 7;
-        const rotateX = ((y / rect.height) - 0.5) * -7;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+        const rotateX = ((y / rect.height) - 0.5) * -10;
 
         projectBody.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
