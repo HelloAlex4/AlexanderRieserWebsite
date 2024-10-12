@@ -1,8 +1,8 @@
 .project {
     position: relative;
-    margin-bottom: 40px;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 300px; /* Adjust as needed */
+    perspective: 1000px;
 }
 
 .project-body {
@@ -16,11 +16,7 @@
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     border: 1px solid #77dd77;
     overflow: hidden;
-    --perspective: 1000px;
-    --rotationX: 0;
-    --rotationY: 0;
-    --angle: 5deg;
-    transform: perspective(var(--perspective)) rotateX(var(--rotationX)) rotateY(var(--rotationY));
+    transform-style: preserve-3d;
     transition: transform 0.3s ease;
 }
 
@@ -37,20 +33,28 @@
 }
 
 .project-details {
+    margin-right: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
     flex: 1;
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
+    pointer-events: auto; /* Add this line */
 }
 
 .project-title {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 0;
     color: #fff;
 }
 
 .project-description {
-    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #d9d9d9;
 }
 
@@ -61,18 +65,22 @@
     color: #1f1f1f;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    z-index: 3; /* Ensure the link is above the trackers */
 }
 
 .project-link:hover {
-    background-color: #5cb85c;
+    background-color: #5ab45a;
+    color: #ffffff;
 }
 
 .mouse-position-tracker {
     position: absolute;
     width: calc(100% / 3);
     height: calc(100% / 3);
-    z-index: 2;
+    pointer-events: none; /* Make these invisible to mouse events */
 }
 
 .mouse-position-tracker:nth-child(3n - 2) { left: 0; }
@@ -89,3 +97,31 @@
 .mouse-position-tracker:nth-child(7):hover ~ .project-body { --rotationY: calc(var(--angle) * -1); --rotationX: calc(var(--angle) * -1); }
 .mouse-position-tracker:nth-child(8):hover ~ .project-body { --rotationX: calc(var(--angle) * -1); }
 .mouse-position-tracker:nth-child(9):hover ~ .project-body { --rotationY: var(--angle); --rotationX: calc(var(--angle) * -1); }
+
+/* New styles */
+.project-body:hover .project-link {
+    z-index: 4; /* Bring link above trackers on project hover */
+}
+
+.actual-project-body {
+    display: flex;
+    height: 100%;
+    transform: translateZ(20px); /* Push content slightly forward */
+}
+
+.projects-container {
+    margin: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    flex: 1;
+}
+
+.projects-container h3{
+    font-size: 1.3em;
+    margin-bottom: 0em;
+}
+
+.projects-container p{
+    font-size: 1em;
+    margin-top: 0.5em;
+}
