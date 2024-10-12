@@ -1,7 +1,7 @@
 const aboutMeContent = [
     {
         title: "Introduction",
-        content: "Hello! I'm Alexander Rieser, a passionate developer and tech enthusiast. I love creating innovative solutions and exploring new technologies."
+        content: "Hello! I'm Alex Rieser, a passionate developer and tech enthusiast. I love creating innovative solutions and exploring new technologies."
     },
     {
         title: "Skills",
