@@ -1,26 +1,46 @@
 .project {
-    display: flex;
-    align-items: center;
+    position: relative;
     margin-bottom: 40px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.project-body {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    border: 1px solid #77dd77;
+    overflow: hidden;
+    --perspective: 1000px;
+    --rotationX: 0;
+    --rotationY: 0;
+    --angle: 5deg;
+    transform: perspective(var(--perspective)) rotateX(var(--rotationX)) rotateY(var(--rotationY));
+    transition: transform 0.3s ease;
 }
 
 .project-image {
-    flex: 0 0 300px;
-    margin-right: 20px;
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 .project-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 4px;
 }
 
 .project-details {
     flex: 1;
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
 
 .project-title {
@@ -47,3 +67,25 @@
 .project-link:hover {
     background-color: #5cb85c;
 }
+
+.mouse-position-tracker {
+    position: absolute;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    z-index: 2;
+}
+
+.mouse-position-tracker:nth-child(3n - 2) { left: 0; }
+.mouse-position-tracker:nth-child(3n - 1) { left: calc(100% / 3); }
+.mouse-position-tracker:nth-child(3n) { right: 0; }
+.mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) { top: calc(100% / 3); }
+.mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) { bottom: 0; }
+
+.mouse-position-tracker:nth-child(1):hover ~ .project-body { --rotationX: var(--angle); --rotationY: calc(var(--angle) * -1); }
+.mouse-position-tracker:nth-child(2):hover ~ .project-body { --rotationX: var(--angle); }
+.mouse-position-tracker:nth-child(3):hover ~ .project-body { --rotationX: var(--angle); --rotationY: var(--angle); }
+.mouse-position-tracker:nth-child(4):hover ~ .project-body { --rotationY: calc(var(--angle) * -1); }
+.mouse-position-tracker:nth-child(6):hover ~ .project-body { --rotationY: var(--angle); }
+.mouse-position-tracker:nth-child(7):hover ~ .project-body { --rotationY: calc(var(--angle) * -1); --rotationX: calc(var(--angle) * -1); }
+.mouse-position-tracker:nth-child(8):hover ~ .project-body { --rotationX: calc(var(--angle) * -1); }
+.mouse-position-tracker:nth-child(9):hover ~ .project-body { --rotationY: var(--angle); --rotationX: calc(var(--angle) * -1); }
