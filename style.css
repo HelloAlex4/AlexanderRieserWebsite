@@ -1,0 +1,144 @@
+body {
+  background: rgb(12, 12, 12);  
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #13fe1f,
+      0 0 20px #04ff00,
+      0 0 35px #04ff00,
+      0 0 40px #04ff00;
+  font-size: 3em;
+  font-weight: 550;
+}
+
+.header-line {
+  height: 2px;
+  margin: 2em 20% 4em;
+  background-color: #fff;
+}
+
+.content {
+  margin: 0 10%;
+  flex: 1;
+}
+
+.nav-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Adjusted padding */
+  height: 150px; /* Reduced height */
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #d9d9d9;
+  border: 2px solid #77dd77;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(119, 221, 119, 0.2);
+}
+
+.nav-item i {
+  font-size: 2.5em;
+  color: #77dd77;
+  margin-bottom: 10px; /* Adjusted margin */
+  transition: all 0.3s ease;
+}
+
+.nav-item span {
+  font-size: 1.4em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-description {
+  font-size: 0.9em;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover .nav-description {
+  opacity: 1;
+  max-height: 100px; /* Adjust as needed */
+  margin-top: 10px;
+}
+
+.nav-item:hover i,
+.nav-item:hover span {
+  transform: translateY(-10px); /* Adjusted to move less */
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #77dd77, #13fe1f);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.nav-item:hover::before {
+  opacity: 0.1;
+}
+
+@keyframes pulsate {
+  100% {
+      text-shadow:
+          0 0 4px #fff,
+          0 0 11px #fff,
+          0 0 19px #fff,
+          0 0 25px #04ff00,
+          0 0 40px #04ff00,
+          0 0 50px #04ff00;
+  }
+  0% {
+      text-shadow:
+          0 0 2px #fff,
+          0 0 4px #fff,
+          0 0 6px #fff,
+          0 0 10px #04ff00,
+          0 0 25px #04ff00,
+          0 0 35px #04ff00;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-section {
+    grid-template-columns: 1fr;
+  }
+}
