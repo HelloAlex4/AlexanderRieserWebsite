@@ -72,3 +72,17 @@ body {
     margin-right: 20%;
     flex: 1;
 }
+
+.footer {
+    transform: translateY(2em);
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7c7c7c;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 4em;
+    height: 5em;
+    width: 100%;
+}
