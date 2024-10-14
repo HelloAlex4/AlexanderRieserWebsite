@@ -26,8 +26,8 @@ const aboutMeContent = [
         content: "Feel free to reach out to me:",
         contact: [
             { type: "Email", value: "rieser.alex@me.com" },
-            { type: "GitHub", value: "" },
-            { type: "LinkedIn", value: "linkedin.com/in/alexanderrieser" }
+            { type: "GitHub", value: "https://github.com/HelloAlex4" },
+            { type: "Threads", value: "https://www.threads.net/@alex.r.123" }
         ]
     }
 ];
