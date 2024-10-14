@@ -6,27 +6,27 @@ const aboutMeContent = [
     {
         title: "Skills",
         content: "My key areas of expertise include:",
-        list: ["JavaScript", "Python", "React", "Node.js", "Machine Learning", "Data Science", "Web Development", "API Design"]
+        list: ["Go", "python", "Data Science", "Blockchain", "Cryptocurrencies", "JavaScript", "Web development", "React", "Machine Learning"]
     },
     {
         title: "Current Projects",
-        content: "I'm currently working on building an AI-powered personal assistant. This project combines my interests in artificial intelligence and practical application development."
+        content: "Currently, my main project is the development of the Synetobit trading bot, which combines my interests in finance, technology, and AI. On the side, I am also developing and maintaining the Brake-Room.ch website."
     },
     {
         title: "Interests",
         content: "Beyond coding, I'm deeply interested in:",
-        list: ["Artificial Intelligence", "Open Source Projects", "Blockchain Technology"]
+        list: ["Politics", "Economics", "Physics", "FPV-Drones"]
     },
     {
         title: "Fun Fact",
-        content: "I can solve a Rubik's cube in under 2 minutes!"
+        content: ""
     },
     {
         title: "Contact",
         content: "Feel free to reach out to me:",
         contact: [
-            { type: "Email", value: "alexander.rieser@example.com" },
-            { type: "GitHub", value: "github.com/alexanderrieser" },
+            { type: "Email", value: "rieser.alex@me.com" },
+            { type: "GitHub", value: "" },
             { type: "LinkedIn", value: "linkedin.com/in/alexanderrieser" }
         ]
     }
