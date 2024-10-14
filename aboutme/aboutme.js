@@ -18,10 +18,6 @@ const aboutMeContent = [
         list: ["Politics", "Economics", "Physics", "FPV-Drones"]
     },
     {
-        title: "Fun Fact",
-        content: ""
-    },
-    {
         title: "Contact",
         content: "Feel free to reach out to me:",
         contact: [
