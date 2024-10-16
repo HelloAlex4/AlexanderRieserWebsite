@@ -21,3 +21,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //setup the website on apache and so on
+//did nothing at all but I need the daily commit
