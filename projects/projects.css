@@ -132,4 +132,9 @@
     .project-image {
         display: none; /* Hide the image */
     }
+
+    .projects-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }

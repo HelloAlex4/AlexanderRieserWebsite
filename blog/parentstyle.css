@@ -86,3 +86,15 @@ body {
     height: 5em;
     width: 100%;
 }
+
+@media (max-width: 900px) { /* Adjust the width as needed */
+    .content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .header-line {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
