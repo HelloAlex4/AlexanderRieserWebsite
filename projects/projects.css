@@ -1,6 +1,7 @@
 .project {
     position: relative;
     width: 100%;
+    aspect-ratio: 2 / 1; /* Add this line */
     height: 300px; /* Adjust as needed */
     perspective: 1000px;
 }
@@ -142,6 +143,10 @@
     .projects-container {
         margin-left: 10%;
         margin-right: 10%;
+    }
+
+    .project {
+        aspect-ratio: 1 / 1; /* Add this line to make the container square on smaller screens */
     }
 }
 
