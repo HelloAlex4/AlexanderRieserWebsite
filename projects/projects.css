@@ -61,20 +61,17 @@
 }
 
 .project-link {
-    margin: 1em;
-    display: flex;
-    padding: 10px 20px;
+    display: inline-flex; /* Change to inline-flex */
+    padding: 10px 7px;
     background-color: #77dd77;
     color: #000000;
-    width: 35%;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: bold;
     position: relative;
     z-index: 3; /* Ensure the link is above the trackers */
     text-align: center;
-    text-justify: center;
     align-items: center;
     justify-content: center;
 }
@@ -145,7 +142,8 @@
     }
 }
 
-.project-links{
+.project-links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Center the links horizontally */
+    gap: 10px; /* Add a small gap between the links */
 }
