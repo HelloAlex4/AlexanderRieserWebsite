@@ -61,17 +61,21 @@
 }
 
 .project-link {
-    display: inline-block;
+    margin: 1em;
+    display: flex;
     padding: 10px 20px;
     background-color: #77dd77;
     color: #000000;
-    width: 35%;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: bold;
     position: relative;
     z-index: 3; /* Ensure the link is above the trackers */
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-link:hover {
