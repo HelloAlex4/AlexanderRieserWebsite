@@ -1,8 +1,7 @@
 .project {
     position: relative;
     width: 100%;
-    aspect-ratio: 2 / 1; /* Add this line */
-    height: 300px; /* Adjust as needed */
+    height: 21em; /* Adjust as needed */
     perspective: 1000px;
 }
 
@@ -135,7 +134,7 @@
     margin-top: 0.5em;
 }
 
-@media (max-width: 900px) { /* Adjust the width as needed */
+@media (max-width: 950px) { /* Adjust the width as needed */
     .project-image {
         display: none; /* Hide the image */
     }
@@ -143,10 +142,6 @@
     .projects-container {
         margin-left: 10%;
         margin-right: 10%;
-    }
-
-    .project {
-        aspect-ratio: 1 / 1; /* Add this line to make the container square on smaller screens */
     }
 }
 

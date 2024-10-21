@@ -25,6 +25,7 @@ body {
       0 0 40px #04ff00;
   font-size: 3em;
   font-weight: 550;
+  letter-spacing: 5px; /* Increased letter spacing for better readability */
 }
 
 .header-line {
