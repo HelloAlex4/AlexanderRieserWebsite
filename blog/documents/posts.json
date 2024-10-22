@@ -1,26 +1,10 @@
 [
   {
     "id": "1",
-    "title": "Getting Started with React",
-    "fileName": "test.md",
-    "author": "Jane Doe",
-    "tags": ["React", "JavaScript", "Web Development"],
-    "date": "2023-03-15"
-  },
-  {
-    "id": "2",
-    "title": "10 Python Tips for Data Scientists",
-    "fileName": "python-tips-for-data-scientists.md",
-    "author": "John Smith.md",
-    "tags": ["Python", "Data Science", "Programming"],
-    "date": "2023-04-02"
-  },
-  {
-    "id": "3",
-    "title": "Introduction to GraphQL",
-    "fileName": "introduction-to-graphql.md",
-    "author": "Alice Johnson.md",
-    "tags": ["GraphQL", "API", "Web Development"],
-    "date": "2023-04-20"
+    "title": "The Story of Break-Room.ch",
+    "fileName": "story-of-break-room.md",
+    "author": "Alexander Rieser",
+    "tags": ["Buissness", "JavaScript", "Web Development"],
+    "date": "2024-10-22"
   }
 ]
