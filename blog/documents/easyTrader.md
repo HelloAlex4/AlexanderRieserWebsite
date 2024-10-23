@@ -1,26 +1,32 @@
-**What is the Synetobit Easy Bot?**
-<br>
-The Synetobit Easy Bot is designed to help anyone create their own custom cryptocurrency trading bot without needing any coding skills. It uses a block-based programming system that’s simple and intuitive, allowing users to design and set up their bots easily. Think of it like building with blocks—just drag, drop, and connect the pieces, and you’re done. Even if you’ve never written a line of code, you can still build a bot tailored to your specific trading needs. Plus, we’ve added a testing interface so you can see exactly how your bot performs before it starts trading with real funds.
-<br>
-<br>
-
-**The Creation**
-<br>
-Easy Bot was born from the original Synetobit trading bot, which we’ve been developing and maintaining. The idea came when one of our friends showed interest in creating his own crypto bot, like ours, but had no coding experience. That sparked the vision for Easy Bot—something that allows anyone, regardless of technical know-how, to take full control of their trading strategies. We wanted to give users more flexibility over their strategies and risk management, without making things complicated. And now, you don’t have to be a developer to design a bot that works exactly how you want it to.
+## What is the Synetobit Easy Bot?
+The Synetobit Easy Bot helps anyone create a custom cryptocurrency trading bot without coding skills. It uses a simple, intuitive block-based system, allowing users to easily design and set up their bots by dragging, dropping, and connecting pieces. Even without coding experience, you can build a bot tailored to your trading needs. A testing interface lets you see how the bot performs before trading with real funds.
 <br>
 <br>
 
-**How to Use Synetobit Easy Bot**
-<br>
-Once it’s launched, using the Synetobit Easy Bot will be a breeze. You’ll be able to jump in and start building your custom bot with a block-based system, much like Scratch. It’s super straightforward: you create the logic visually, without writing a single line of code. After you’ve built your bot, you can connect it to one of our supported exchanges using API keys, or simply deposit cryptocurrency directly onto the Synetobit platform. From there, you can test your bot’s performance in a simulation, tweak it, and optimize it, so it’s ready for live trading when you are. The whole process is designed to make bot creation as smooth and stress-free as possible.
+## The Creation
+Easy Bot was developed from the original Synetobit trading bot. The idea came when a friend wanted to create his own crypto bot but had no coding experience. This inspired us to create Easy Bot—allowing anyone, regardless of technical skills, to control their trading strategies. We aimed to provide flexibility in strategy and risk management without complexity, so now, you don’t need to be a developer to design a bot tailored to your needs.
 <br>
 <br>
 
-**Where to Use Synetobit Easy Bot**   
+## How to Use Synetobit Easy Bot
+Once launched, using the Synetobit Easy Bot will be simple. You can start building your custom bot with a block-based system, much like Scratch. It’s straightforward: create the logic visually, without writing any code. After building your bot, you can connect it to one of our supported exchanges via API keys or deposit cryptocurrency on the Synetobit platform. Then, test your bot’s performance in a simulation, tweak and optimize it, and get it ready for live trading. The whole process is designed to make bot creation smooth and stress-free.
 <br>
-Right now, the Synetobit Easy Bot is still in development, but it’s coming soon to the Synetobit website. We’re working hard to make sure everything is polished and ready for launch, so it’s as easy to use as possible. Whether you want to try out new trading strategies or fine-tune an existing one, Easy Bot will give you the flexibility and control to do just that—all without needing any programming knowledge. The goal is to put you in control, giving you the tools to create, test, and execute strategies that fit your vision of the perfect trading bot.
+<br>
+
+## Where to Use Synetobit Easy Bot
+The Synetobit Easy Bot is still in development but will be available soon on the Synetobit website. We’re working hard to ensure it’s polished and user-friendly. Whether you want to try new trading strategies or refine existing ones, Easy Bot will offer flexibility and control, all without requiring programming knowledge. The goal is to give you the tools to create, test, and execute strategies that align with your ideal trading bot.
+
+<br>
+<br>
+
+### TL;DR
+The Synetobit Easy Bot lets users create custom cryptocurrency trading bots without coding, using a block-based system for easy design and testing. Inspired by a friend’s need for a no-code solution, it allows users to control their trading strategies and test them before live trading. The bot is still in development and will soon be available on the Synetobit website.
 <br>
 <br>
 <br>
 <br>
 -Alex Rieser
+<br>
+<br>
+<br>
+<br>
