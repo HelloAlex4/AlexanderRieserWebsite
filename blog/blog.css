@@ -1,9 +1,10 @@
 .content{
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.15rem;
+    line-height: 1.4;
     margin-left: 22%;
     margin-right: 22%;
+    letter-spacing: 0.03rem;
 }
 
 h1{
