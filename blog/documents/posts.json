@@ -1,5 +1,21 @@
 [
   {
+    "id": "4",
+    "title": "Synetobit trading Bot",
+    "fileName": "synetobit.md",
+    "author": "Alexander Rieser",
+    "tags": ["Cryptocurrency", "JavaScript", "Web Development", "Go", "Buissness"],
+    "date": "2024-10-25"
+  },
+  {
+    "id": "3",
+    "title": "Synetobit Trading Bot",
+    "fileName": "synetobit.md",
+    "author": "Alexander Rieser",
+    "tags": ["Cryptocurrency", "JavaScript", "Web Development", "Go", "Buissness"],
+    "date": "2024-10-24"
+  }, 
+  {
     "id": "2",
     "title": "break-room",
     "fileName": "break-room.md",
