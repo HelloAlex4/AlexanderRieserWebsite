@@ -65,7 +65,7 @@
 
 .project-link {
     display: inline-flex; /* Change to inline-flex */
-    padding: 10px 7px;
+    padding: 10px 12px;
     background-color: #77dd77;
     color: #000000;
     text-decoration: none;
