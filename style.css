@@ -15,17 +15,17 @@ body {
 }
 
 .neonText {
+  font-family: "helvetica", monospace;
   color: #fff;
   text-shadow:
+      0 0 3px #fff,
       0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 15px #13fe1f,
-      0 0 20px #04ff00,
-      0 0 35px #04ff00,
-      0 0 40px #04ff00;
+      0 0 10px #13fe1f,
+      0 0 15px #04ff00,
+      0 0 20px #04ff00;
   font-size: 3em;
-  font-weight: 550;
-  letter-spacing: 5px; /* Increased letter spacing for better readability */
+  font-weight: 400;
+  letter-spacing: 4px; /* Increased letter spacing for better readability */
 }
 
 .header-line {
