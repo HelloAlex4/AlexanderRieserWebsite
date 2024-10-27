@@ -143,3 +143,45 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Basic Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.scrolling-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  border-top: 1px solid #04ff00;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.scrolling-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 45s linear infinite;
+}
+
+.scrolling-content span {
+  font-size: 14px;
+  color: #04ff00;
+  padding: 0 20px; /* Add space between items */
+}
+
+/* Infinite Scroll Keyframes */
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
