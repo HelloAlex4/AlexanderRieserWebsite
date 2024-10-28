@@ -28,3 +28,5 @@ function typeAllTexts() {
 }
 
 window.onload = typeAllTexts;
+
+//added mails to the list, and adde website to break room
