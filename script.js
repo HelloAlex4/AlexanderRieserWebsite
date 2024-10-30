@@ -31,3 +31,4 @@ window.onload = typeAllTexts;
 
 //added mails to the list, and adde website to break room
 //created emails still need to test website availability tomorrow
+//sent out 5 test emails, since I have a lot to do this week
