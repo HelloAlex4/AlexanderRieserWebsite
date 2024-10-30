@@ -167,7 +167,7 @@ body {
 .scrolling-content {
   display: flex;
   white-space: nowrap;
-  animation: scroll 50s linear infinite;
+  animation: scroll 65s linear infinite;
 }
 
 .scrolling-content span {
