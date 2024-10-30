@@ -156,7 +156,7 @@ body {
   bottom: 0;
   width: 100%;
   background-color: #000000;
-  border-top: 1px solid #04ff00;
+  border-top: 1px solid #13fe1f;
   overflow: hidden;
   height: 40px;
   display: flex;
@@ -172,7 +172,7 @@ body {
 
 .scrolling-content span {
   font-size: 14px;
-  color: #04ff00;
+  color: #13fe1f;
   padding: 0 20px; /* Add space between items */
 }
 
