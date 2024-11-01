@@ -33,3 +33,4 @@ window.onload = typeAllTexts;
 //created emails still need to test website availability tomorrow
 //sent out 5 test emails, since I have a lot to do this week
 //learned wayyyy too much french today. and no one has replied to my mails yet.
+//idk did nothing today.
