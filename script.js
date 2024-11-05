@@ -34,3 +34,4 @@ window.onload = typeAllTexts;
 //sent out 5 test emails, since I have a lot to do this week
 //learned wayyyy too much french today. and no one has replied to my mails yet.
 //idk did nothing today.
+//first customer
