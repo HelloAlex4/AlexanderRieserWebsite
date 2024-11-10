@@ -35,3 +35,4 @@ window.onload = typeAllTexts;
 //learned wayyyy too much french today. and no one has replied to my mails yet.
 //idk did nothing today.
 //first customer
+//i want that green thing
