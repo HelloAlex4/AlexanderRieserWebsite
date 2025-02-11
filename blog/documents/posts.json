@@ -1,5 +1,13 @@
 [
   {
+    "id": "4",
+    "title": "Self Balancing ball robot",
+    "fileName": "balancer.md",
+    "author": "Alexander Rieser",
+    "tags": ["Buissness", "JavaScript", "Web Development", "engineering"],
+    "date": "2024-10-23"
+  },
+  {
     "id": "3",
     "title": "Synetobit Trading Bot",
     "fileName": "synetobit.md",
