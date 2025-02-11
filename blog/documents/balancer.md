@@ -120,17 +120,17 @@ Each of the three motors supports a corner of the plate. Tilting the plate along
 
 The required height changes for each motor (h₁, h₂, h₃) can be determined using the following equations:
 
-$$
+\[
 h_1 = L \cdot \tan(\theta_x) + W \cdot \tan(\theta_y)
-$$
+\]
 
-$$
+\[
 h_2 = L \cdot \tan(\theta_x) - W \cdot \tan(\theta_y)
-$$
+\]
 
-$$
+\[
 h_3 = -L \cdot \tan(\theta_x)
-$$
+\]
 
 Where:  
 - $h_1, h_2, h_3$ = The required vertical movement of each motor.  
