@@ -10,18 +10,6 @@ function getIdFromUrl() {
   }
 }
 
-marked.use({
-  renderer: {
-    paragraph(text) {
-      // Detect LaTeX blocks ($$...$$) and convert them to a <div> for MathJax/KaTeX
-      if (text.startsWith("$$") && text.endsWith("$$")) {
-        return `<div class="math-block">${text}</div>`;
-      }
-      return text;
-    }
-  }
-});
-
 async function fetchPostsData() {
   try {
     const response = await fetch('./documents/posts.json');
