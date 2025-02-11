@@ -38,34 +38,21 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
-    // Configure marked to handle LaTeX
-    marked.setOptions({
-      renderer: new marked.Renderer(),
-      highlight: function(code) {
-        return code;
-      },
-      breaks: true,
-      gfm: true,
-      math: true
-    });
-
     // Convert markdown to HTML
     const htmlContent = marked.parse(markdownContent);
-
-    // Display the HTML content
     document.getElementById('content').innerHTML = htmlContent;
+
+    // Render LaTeX
+    if (typeof renderMathInElement === 'function') {
+      renderMathInElement(document.getElementById('content'));
+    }
+
+    // Update page metadata
     document.getElementById('header-title').innerHTML = post.title;
     document.getElementById('date').innerHTML = post.date;
     document.getElementById('author').innerHTML = `By ${post.author}`;
+    document.getElementById('tags').innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
 
-    // Display tags
-    const tagsElement = document.getElementById('tags');
-    tagsElement.innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
-
-    // Trigger MathJax to process the new content
-    if (window.MathJax) {
-      MathJax.typesetPromise();
-    }
   } catch (error) {
     console.error('Error loading page:', error);
   }
