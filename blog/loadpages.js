@@ -10,6 +10,20 @@ function getIdFromUrl() {
   }
 }
 
+const renderer = new marked.Renderer();
+
+// Preserve normal paragraph behavior while handling LaTeX
+const originalParagraphRenderer = renderer.paragraph.bind(renderer);
+renderer.paragraph = function (text) {
+  if (text.startsWith("$$") && text.endsWith("$$")) {
+    return `<div class="math-block">${text.slice(2, -2)}</div>`; // Remove the $$
+  }
+  return originalParagraphRenderer(text);
+};
+
+// Apply the custom renderer
+marked.use({ renderer });
+
 async function fetchPostsData() {
   try {
     const response = await fetch('./documents/posts.json');
