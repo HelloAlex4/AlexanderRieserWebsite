@@ -63,21 +63,6 @@ async function loadPage(id) {
   } catch (error) {
     console.error('Error loading page:', error);
   }
-
-  if (typeof renderMathInElement === "function") {
-    renderMathInElement(document.body);
-  }
-
-  if (window.MathJax) {
-    MathJax.typesetPromise().catch(err => console.error("MathJax rendering error:", err));
-  } else if (typeof renderMathInElement === "function") {
-    renderMathInElement(document.getElementById("content"), {
-      delimiters: [
-        { left: "$$", right: "$$", display: true }, // Block equations
-        { left: "\\(", right: "\\)", display: false } // Inline equations
-      ]
-    });
-  }
 }
 
 // Example usage
