@@ -10,20 +10,6 @@ function getIdFromUrl() {
   }
 }
 
-const renderer = new marked.Renderer();
-
-// Preserve normal paragraph behavior while handling LaTeX
-const originalParagraphRenderer = renderer.paragraph.bind(renderer);
-renderer.paragraph = function (text) {
-  if (text.startsWith("$$") && text.endsWith("$$")) {
-    return `<div class="math-block">${text.slice(2, -2)}</div>`; // Remove the $$
-  }
-  return originalParagraphRenderer(text);
-};
-
-// Apply the custom renderer
-marked.use({ renderer });
-
 async function fetchPostsData() {
   try {
     const response = await fetch('./documents/posts.json');
@@ -52,18 +38,23 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
-    // Convert markdown to HTML but preserve math blocks
-    const htmlContent = marked.parse(markdownContent);
+    // Convert markdown to HTML
+    let htmlContent = marked.parse(markdownContent);
+
+    // Post-process LaTeX blocks ($$...$$)
+    htmlContent = htmlContent.replace(/\$\$(.*?)\$\$/gs, '<div class="math-block">$$$1$$</div>');
+
+    // Insert processed content into the page
     document.getElementById('content').innerHTML = htmlContent;
 
-    // Ensure KaTeX or MathJax re-renders after inserting content
+    // Re-render math if MathJax or KaTeX is loaded
     if (window.MathJax) {
       MathJax.typesetPromise();
     } else if (typeof renderMathInElement === "function") {
       renderMathInElement(document.getElementById("content"));
     }
 
-    // Update page metadata
+    // Update metadata
     document.getElementById('header-title').innerHTML = post.title;
     document.getElementById('date').innerHTML = post.date;
     document.getElementById('author').innerHTML = `By ${post.author}`;
