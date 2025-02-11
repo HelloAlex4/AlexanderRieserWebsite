@@ -1,7 +1,7 @@
 [
   {
     "id": "4",
-    "title": "Ball balancing Plate System using custom PID function",
+    "title": "Self Balancing ball robot",
     "fileName": "balancer.md",
     "author": "Alexander Rieser",
     "tags": ["Buissness", "JavaScript", "Web Development", "engineering"],
