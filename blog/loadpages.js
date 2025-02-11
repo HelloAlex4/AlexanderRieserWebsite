@@ -38,6 +38,14 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
+    // Configure marked to preserve LaTeX delimiters
+    marked.setOptions({
+      breaks: true,
+      gfm: true,
+      pedantic: false,
+      sanitize: false
+    });
+
     // Convert markdown to HTML
     let htmlContent = marked.parse(markdownContent);
 
@@ -50,9 +58,10 @@ async function loadPage(id) {
     document.getElementById('author').innerHTML = `By ${post.author}`;
     document.getElementById('tags').innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
 
-    // Trigger MathJax to process the new content
+    // Wait for MathJax to be ready and then typeset
     if (window.MathJax) {
-      MathJax.typesetPromise();
+      await MathJax.startup.promise;
+      await MathJax.typesetPromise([document.getElementById('content')]);
     }
 
   } catch (error) {

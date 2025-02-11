@@ -1,4 +1,3 @@
-# Ball balancing Plate System using custom PID function
 read This Article on Github: [Github]([Github](https://github.com/HelloAlex4/balancingPlate/tree/master)
 
 <img width="400" alt="Screenshot 2025-01-31 at 21 55 48" src="https://github.com/user-attachments/assets/f19e2a78-e578-413c-9565-57dd583de12f" />
