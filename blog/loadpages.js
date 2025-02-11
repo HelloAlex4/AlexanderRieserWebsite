@@ -38,15 +38,8 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
-    // Configure marked renderer to preserve LaTeX
-    const renderer = new marked.Renderer();
-    const originalParagraph = renderer.paragraph.bind(renderer);
-    renderer.paragraph = (text) => {
-      return originalParagraph(text.replace(/\\\[(.*?)\\\]/g, '$$$$1$$').replace(/\\\((.*?)\\\)/g, '$$$1$'));
-    };
-
+    // Configure marked to preserve LaTeX delimiters
     marked.setOptions({
-      renderer: renderer,
       breaks: true,
       gfm: true,
       pedantic: false,
@@ -65,15 +58,10 @@ async function loadPage(id) {
     document.getElementById('author').innerHTML = `By ${post.author}`;
     document.getElementById('tags').innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
 
-    // Ensure MathJax is fully loaded before typesetting
-    if (typeof MathJax !== 'undefined') {
-      try {
-        await MathJax.startup.promise;
-        await MathJax.texReset();
-        await MathJax.typesetPromise([document.getElementById('content')]);
-      } catch (e) {
-        console.error('MathJax error:', e);
-      }
+    // Wait for MathJax to be ready and then typeset
+    if (window.MathJax) {
+      await MathJax.startup.promise;
+      await MathJax.typesetPromise([document.getElementById('content')]);
     }
 
   } catch (error) {
