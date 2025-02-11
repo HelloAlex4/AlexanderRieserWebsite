@@ -10,6 +10,18 @@ function getIdFromUrl() {
   }
 }
 
+marked.use({
+  renderer: {
+    paragraph(text) {
+      // Detect LaTeX blocks ($$...$$) and convert them to a <div> for MathJax/KaTeX
+      if (text.startsWith("$$") && text.endsWith("$$")) {
+        return `<div class="math-block">${text}</div>`;
+      }
+      return text;
+    }
+  }
+});
+
 async function fetchPostsData() {
   try {
     const response = await fetch('./documents/posts.json');
@@ -38,13 +50,15 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
-    // Convert markdown to HTML
+    // Convert markdown to HTML but preserve math blocks
     const htmlContent = marked.parse(markdownContent);
     document.getElementById('content').innerHTML = htmlContent;
 
-    // Render MathJax (reprocess equations)
+    // Ensure KaTeX or MathJax re-renders after inserting content
     if (window.MathJax) {
       MathJax.typesetPromise();
+    } else if (typeof renderMathInElement === "function") {
+      renderMathInElement(document.getElementById("content"));
     }
 
     // Update page metadata
