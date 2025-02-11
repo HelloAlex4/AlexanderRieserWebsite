@@ -41,18 +41,8 @@ async function loadPage(id) {
     // Convert markdown to HTML
     let htmlContent = marked.parse(markdownContent);
 
-    // Post-process LaTeX blocks ($$...$$)
-    htmlContent = htmlContent.replace(/\$\$(.*?)\$\$/gs, '<div class="MathJax CtxtMenu_Attached_0">$$$1$$</div>');
-
     // Insert processed content into the page
     document.getElementById('content').innerHTML = htmlContent;
-
-    // Re-render math if MathJax or KaTeX is loaded
-    if (window.MathJax) {
-      MathJax.typesetPromise();
-    } else if (typeof renderMathInElement === "function") {
-      renderMathInElement(document.getElementById("content"));
-    }
 
     // Update metadata
     document.getElementById('header-title').innerHTML = post.title;
@@ -60,12 +50,16 @@ async function loadPage(id) {
     document.getElementById('author').innerHTML = `By ${post.author}`;
     document.getElementById('tags').innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
 
+    // Trigger MathJax to process the new content
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    }
+
   } catch (error) {
     console.error('Error loading page:', error);
   }
-
-
 }
+
 
 // Example usage
 document.addEventListener('DOMContentLoaded', () => {
