@@ -64,6 +64,10 @@ async function loadPage(id) {
     console.error('Error loading page:', error);
   }
 
+  if (typeof renderMathInElement === "function") {
+    renderMathInElement(document.body);
+  }
+
   if (window.MathJax) {
     MathJax.typesetPromise().catch(err => console.error("MathJax rendering error:", err));
   } else if (typeof renderMathInElement === "function") {
@@ -75,12 +79,6 @@ async function loadPage(id) {
     });
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (typeof renderMathInElement === "function") {
-    renderMathInElement(document.body);
-  }
-});
 
 // Example usage
 document.addEventListener('DOMContentLoaded', () => {
