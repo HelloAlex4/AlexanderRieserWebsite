@@ -1,5 +1,5 @@
 # Ball balancing Plate System using custom PID function
-<img width="700" alt="Screenshot 2025-01-31 at 21 55 48" src="https://github.com/user-attachments/assets/9a61cfe5-c9bf-478c-8ec0-f624e320902d" />
+<img width="700" alt="Screenshot 2025-01-31 at 21 55 48" src="https://github.com/user-attachments/assets/f19e2a78-e578-413c-9565-57dd583de12f" />
 
 ## 1. Project overview
 this project presents the development of a **ball-balancing plate system** using three stepper motors to precisely and dinamically control the tilt and vertical position of a platform. The system is able to balance a ball atop of the platform and move it to any specified point on the plate. In addition to that the the System is able to launch the ball in the air and catch it again on the Plate.
