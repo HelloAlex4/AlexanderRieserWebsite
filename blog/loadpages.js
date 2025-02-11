@@ -76,6 +76,12 @@ async function loadPage(id) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof renderMathInElement === "function") {
+    renderMathInElement(document.body);
+  }
+});
+
 // Example usage
 document.addEventListener('DOMContentLoaded', () => {
   const id = getIdFromUrl();
