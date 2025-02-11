@@ -42,7 +42,7 @@ async function loadPage(id) {
     let htmlContent = marked.parse(markdownContent);
 
     // Post-process LaTeX blocks ($$...$$)
-    htmlContent = htmlContent.replace(/\$\$(.*?)\$\$/gs, '<div class="math-block">$$$1$$</div>');
+    htmlContent = htmlContent.replace(/\$\$(.*?)\$\$/gs, '<div class="MathJax CtxtMenu_Attached_0">$$$1$$</div>');
 
     // Insert processed content into the page
     document.getElementById('content').innerHTML = htmlContent;
