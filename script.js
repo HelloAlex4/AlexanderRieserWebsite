@@ -27,4 +27,15 @@ function typeAllTexts() {
   });
 }
 
+<<<<<<< HEAD
 window.onload = typeAllTexts;
+=======
+window.onload = typeAllTexts;
+
+//added mails to the list, and adde website to break room
+//created emails still need to test website availability tomorrow
+//sent out 5 test emails, since I have a lot to do this week
+//learned wayyyy too much french today. and no one has replied to my mails yet.
+//idk did nothing today.
+//idfl im at a oarty tonight but i need to do the commit
+>>>>>>> ca06c2a113edc4ec26a4811e7faf2ee095b79585
