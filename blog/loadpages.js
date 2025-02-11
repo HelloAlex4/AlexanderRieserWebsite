@@ -38,6 +38,17 @@ async function loadPage(id) {
     const response = await fetch(`./documents/${post.fileName}`);
     const markdownContent = await response.text();
 
+    // Configure marked to handle LaTeX
+    marked.setOptions({
+      renderer: new marked.Renderer(),
+      highlight: function(code) {
+        return code;
+      },
+      breaks: true,
+      gfm: true,
+      math: true
+    });
+
     // Convert markdown to HTML
     const htmlContent = marked.parse(markdownContent);
 
@@ -50,6 +61,11 @@ async function loadPage(id) {
     // Display tags
     const tagsElement = document.getElementById('tags');
     tagsElement.innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+
+    // Trigger MathJax to process the new content
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    }
   } catch (error) {
     console.error('Error loading page:', error);
   }
