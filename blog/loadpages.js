@@ -41,8 +41,18 @@ async function loadPage(id) {
     // Convert markdown to HTML
     let htmlContent = marked.parse(markdownContent);
 
+    // Post-process LaTeX blocks ($$...$$)
+    htmlContent = htmlContent.replace(/\$\$(.*?)\$\$/gs, '<div class="math-block">$$$1$$</div>');
+
     // Insert processed content into the page
     document.getElementById('content').innerHTML = htmlContent;
+
+    // Re-render math if MathJax or KaTeX is loaded
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    } else if (typeof renderMathInElement === "function") {
+      renderMathInElement(document.getElementById("content"));
+    }
 
     // Update metadata
     document.getElementById('header-title').innerHTML = post.title;
