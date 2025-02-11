@@ -63,6 +63,8 @@ async function loadPage(id) {
   } catch (error) {
     console.error('Error loading page:', error);
   }
+
+
 }
 
 // Example usage
