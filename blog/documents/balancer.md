@@ -1,4 +1,6 @@
 # Ball balancing Plate System using custom PID function
+read This Article on Github: [Github]([Github](https://github.com/HelloAlex4/balancingPlate/tree/master)
+
 <img width="900" alt="Screenshot 2025-01-31 at 21 55 48" src="https://github.com/user-attachments/assets/f19e2a78-e578-413c-9565-57dd583de12f" />
 
 ## 1. Project overview
@@ -313,3 +315,7 @@ https://github.com/user-attachments/assets/8e9c09fc-2c4e-402d-9fc7-06fbf60173ed
 
 Demonstration of the ball being pushed and setteling again.
 More videos and pictures can be found within the reposotory folder
+
+
+
+--Alex Rieser

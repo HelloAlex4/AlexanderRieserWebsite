@@ -42,9 +42,9 @@ async function loadPage(id) {
     const htmlContent = marked.parse(markdownContent);
     document.getElementById('content').innerHTML = htmlContent;
 
-    // Render LaTeX
-    if (typeof renderMathInElement === 'function') {
-      renderMathInElement(document.getElementById('content'));
+    // Render MathJax (reprocess equations)
+    if (window.MathJax) {
+      MathJax.typesetPromise();
     }
 
     // Update page metadata
